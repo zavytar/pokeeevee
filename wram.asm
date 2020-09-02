@@ -2758,8 +2758,10 @@ wFastShipB1FSceneID::                             db
 wMountMoonSquareSceneID::                         db
 wMobileTradeRoomSceneID::                         db
 wMobileBattleRoomSceneID::                        db
+wBluesHouseSceneID::							  db
+wOaksLabSceneID::								  db
 
-	ds 49
+	ds 47
 
 ; fight counts
 wJackFightCount::    db

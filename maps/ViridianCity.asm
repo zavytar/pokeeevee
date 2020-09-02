@@ -3,6 +3,7 @@
 	const VIRIDIANCITY_GRAMPS2
 	const VIRIDIANCITY_FISHER
 	const VIRIDIANCITY_YOUNGSTER
+	const VIRIDIANCITY_LASS1
 
 ViridianCity_MapScripts:
 	def_scene_scripts
@@ -17,6 +18,20 @@ ViridianCity_MapScripts:
 ViridianCityCoffeeGramps:
 	faceplayer
 	opentext
+	writetext ViridianCity_CoffeeGrampsText1
+	waitbutton
+	closetext
+	end
+	
+ViridianCity_CoffeeGrampsText1:
+	text "Hey, get out!"
+	
+	para "This is private"
+	line "property!"
+	done
+	
+
+Gramps:
 	writetext ViridianCityCoffeeGrampsQuestionText
 	yesorno
 	iffalse .no
@@ -66,6 +81,26 @@ ViridianCityDreamEaterFisher:
 
 ViridianCityYoungsterScript:
 	jumptextfaceplayer ViridianCityYoungsterText
+
+ViridianCityLassScript:
+	faceplayer
+	opentext
+	writetext ViridianCity_LassText1
+	waitbutton
+	closetext
+	end
+	
+ViridianCity_LassText1:
+	text "Grampa! Don't"
+	line "be so mean!"
+	
+	para "…"
+	
+	para "Sorry about that."
+	line "He hasn't had his"
+	cont "coffee yet."
+	done
+	
 
 ViridianCitySign:
 	jumptext ViridianCitySignText
@@ -125,23 +160,17 @@ ViridianCityCoffeeGrampsDoubtedText:
 	done
 
 ViridianCityGrampsNearGymText:
-	text "This GYM didn't"
-	line "have a LEADER"
-	cont "until recently."
+	text "This GYM has been"
+	line "closed for a"
+	cont "very long time."
 
-	para "A young man from"
-	line "PALLET became the"
-
-	para "LEADER, but he's"
-	line "often away."
+	para "Who could the"
+	line "LEADER be?"
 	done
 
 ViridianCityGrampsNearGymBlueReturnedText:
-	text "Are you going to"
-	line "battle the LEADER?"
-
-	para "Good luck to you."
-	line "You'll need it."
+	text "The VIRIDIAN GYM"
+	line "LEADER is back!"
 	done
 
 ViridianCityDreamEaterFisherText:
@@ -217,7 +246,7 @@ ViridianCity_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 32,  7, VIRIDIAN_GYM, 1
+	warp_event 31,  6, VIRIDIAN_GYM, 1
 	warp_event 21,  9, VIRIDIAN_NICKNAME_SPEECH_HOUSE, 1
 	warp_event 23, 15, TRAINER_HOUSE_1F, 1
 	warp_event 29, 19, VIRIDIAN_MART, 2
@@ -234,7 +263,9 @@ ViridianCity_MapEvents:
 	bg_event 30, 19, BGEVENT_READ, ViridianCityMartSign
 
 	def_object_events
-	object_event 18,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGramps, -1
+	object_event 18, 13, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGramps, -1
 	object_event 30,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianCityGrampsNearGym, -1
 	object_event  6, 23, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianCityDreamEaterFisher, -1
 	object_event 17, 21, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 3, 3, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungsterScript, -1
+	object_event 17, 13, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 3, 3, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianCityLassScript, -1
+

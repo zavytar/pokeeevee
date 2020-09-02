@@ -268,9 +268,14 @@
 	const EVENT_DANA_GAVE_THUNDERSTONE
 	const EVENT_TULLY_GAVE_WATER_STONE
 	const EVENT_TIFFANY_GAVE_PINK_BOW
-; Unused: next 339 events
+;added now	
+	const EVENT_OAK_GONE_FROM_LAB
+	const EVENT_RED_GONE_FROM_LAB
+	const EVENT_TOOK_EEVEE
+	const EVENT_BEAT_RED_OAKSLAB
+; Unused: next 335 events
 
-	const_next 600
+	const_next 596
 ; Kurt Apricorn events
 	const EVENT_GAVE_KURT_RED_APRICORN
 	const EVENT_GAVE_KURT_BLU_APRICORN

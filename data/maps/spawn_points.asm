@@ -7,10 +7,10 @@ ENDM
 SpawnPoints:
 ; entries correspond to SPAWN_* constants
 
-	spawn BLUES_HOUSE,           	   1,  3
+	spawn BLUES_HOUSE,           	   1,  9
 	spawn VIRIDIAN_POKECENTER_1F,      5,  3
 
-	spawn PALLET_TOWN,                 5,  6
+	spawn PALLET_TOWN,                12, 12
 	spawn VIRIDIAN_CITY,              23, 26
 	spawn PEWTER_CITY,                13, 26
 	spawn CERULEAN_CITY,              19, 22

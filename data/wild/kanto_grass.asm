@@ -169,27 +169,27 @@ KantoGrassWildMons:
 	; morn
 	db 2, PIDGEY
 	db 2, RATTATA
-	db 3, SENTRET
+	db 3, RATTATA
 	db 3, PIDGEY
-	db 6, FURRET
+	db 5, RATTATA
 	db 4, PIDGEY
-	db 4, PIDGEY
+	db 5, PIDGEY
 	; day
 	db 2, PIDGEY
 	db 2, RATTATA
-	db 3, SENTRET
+	db 3, RATTATA
 	db 3, PIDGEY
-	db 6, FURRET
+	db 5, RATTATA
 	db 4, PIDGEY
-	db 4, PIDGEY
+	db 5, PIDGEY
 	; nite
-	db 2, HOOTHOOT
+	db 2, PIDGEY
 	db 2, RATTATA
 	db 3, RATTATA
-	db 3, HOOTHOOT
-	db 6, RATICATE
-	db 4, HOOTHOOT
-	db 4, HOOTHOOT
+	db 3, PIDGEY
+	db 5, RATTATA
+	db 4, PIDGEY
+	db 5, PIDGEY
 
 	map_id ROUTE_2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
