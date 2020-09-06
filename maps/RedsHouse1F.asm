@@ -13,15 +13,7 @@ RedsHouse1F_MapScripts:
 RedsMom:
 	faceplayer
 	opentext
-	checkevent EVENT_MET_REDS_MOM
-	iftrue .MetAlready
-	writetext RedsMomText1
-	waitbutton
-	closetext
-	setevent EVENT_MET_REDS_MOM
-	end
-.MetAlready:
-	writetext RedsMomText2
+	writetext RedsMomText
 	waitbutton
 	closetext
 	end
@@ -32,44 +24,30 @@ RedsHouse1FTV:
 RedsHouse1FBookshelf:
 	jumpstd PictureBookshelfScript
 
-RedsMomText1:
-	text "Hi!"
+RedsMomText:
+	text "Hi, <PLAYER>!"
 
-	para "RED's been away"
-	line "for a long time."
+	para "<RIVAL> isn't here"
+	line "right now."
 
-	para "He hasn't called"
-	line "either, so I have"
+	para "I can't believe"
+	line "you're both on a"
+	cont "#MON journey"
+	cont "of your own!"
 
-	para "no idea where he"
-	line "is or what he's"
-	cont "been doing."
-
-	para "They say that no"
-	line "word is proof that"
-
-	para "he's doing fine,"
-	line "but I do worry"
-	cont "about him."
-	done
-
-RedsMomText2:
-	text "I worry about RED"
-	line "getting hurt or"
-
-	para "sick, but he's a"
-	line "boy. I'm proud"
-
-	para "that he is doing"
-	line "what he wants to"
-
-	para "do."
+	para "Good luck!"
 	done
 
 RedsHouse1FTVText:
-	text "They have programs"
-	line "that aren't shown"
-	cont "in JOHTO…"
+	text "It's a movie."
+	
+	para "Two guys are"
+	line "dancing on a"
+	cont "keyboard…"
+	
+	para "…"
+	
+	para "Better get going!"
 	done
 
 RedsHouse1F_MapEvents:

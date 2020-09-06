@@ -137,6 +137,8 @@ MomPhoneLectureScript:
 	setflag ENGINE_MOM_ACTIVE
 	specialphonecall SPECIALCALL_NONE
 	farwritetext MomPhoneLectureText
-	yesorno
-	iftrue MomPhoneSaveMoneyScript
-	sjump MomPhoneWontSaveMoneyScript
+;	yesorno
+;	iftrue MomPhoneSaveMoneyScript
+	promptbutton
+	sjump MomPhoneHangUpScript
+	

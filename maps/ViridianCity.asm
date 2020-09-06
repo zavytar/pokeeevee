@@ -236,19 +236,29 @@ ViridianCityWelcomeSignText:
 	done
 
 TrainerHouseSignText:
-	text "TRAINER HOUSE"
-
-	para "The Club for Top"
-	line "Trainer Battles"
+	text "VIRIDIAN CITY"
+	line "#MON ACADEMY"
 	done
+	
+ViridianCityGymClosed:
+	opentext 
+	writetext ViridianGymIsClosedText
+	waitbutton
+	closetext
+	end
+	
+ViridianGymIsClosedText:
+	text "The GYM doors"
+	line "are closed…"
+	end
 
 ViridianCity_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 31,  6, VIRIDIAN_GYM, 1
+;	warp_event 31,  6, VIRIDIAN_GYM, 1
 	warp_event 21,  9, VIRIDIAN_NICKNAME_SPEECH_HOUSE, 1
-	warp_event 23, 15, TRAINER_HOUSE_1F, 1
+	warp_event 21, 13, TRAINER_HOUSE_1F, 1
 	warp_event 29, 19, VIRIDIAN_MART, 2
 	warp_event 23, 25, VIRIDIAN_POKECENTER_1F, 1
 
@@ -258,9 +268,10 @@ ViridianCity_MapEvents:
 	bg_event 17, 17, BGEVENT_READ, ViridianCitySign
 	bg_event 27,  7, BGEVENT_READ, ViridianGymSign
 	bg_event 19,  1, BGEVENT_READ, ViridianCityWelcomeSign
-	bg_event 21, 15, BGEVENT_READ, TrainerHouseSign
+	bg_event 19, 13, BGEVENT_READ, TrainerHouseSign
 	bg_event 24, 25, BGEVENT_READ, ViridianCityPokecenterSign
 	bg_event 30, 19, BGEVENT_READ, ViridianCityMartSign
+	bg_event 32,  7, BGEVENT_READ, ViridianCityGymClosed
 
 	def_object_events
 	object_event 18, 13, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGramps, -1

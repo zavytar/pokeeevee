@@ -115,9 +115,7 @@ MomPhoneWontSaveMoneyText:
 	done
 
 MomPhoneHangUpText:
-	text "<PLAYER>, keep it"
-	line "up! I'm rooting"
-	cont "for you, baby!"
+	text "…"
 	done
 
 MomPhoneNoPokemonText:
@@ -149,17 +147,15 @@ MomPhoneNoGymQuestText:
 	done
 
 MomPhoneLectureText:
-	text "Hello?"
+	text "Hi, <PLAYER>!"
 
-	para "…… <PLAYER>?"
-	line "I heard from PROF."
+	para "How's everything"
+	cont "going?"
 
-	para "ELM that you went"
-	line "on a long trip."
+	para "I think Grandpa was"
+	line "looking for you."
 
-	para "I wish you would"
-	line "have told me…"
-
-	para "What about money?"
-	line "Should I save it?"
+	para "Get back to the"
+	line "LAB as soon as"
+	cont "you can!"
 	done
